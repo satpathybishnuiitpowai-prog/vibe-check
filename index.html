@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise!</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding-top: 100px; background-color: #f0f0f0; }
+        button { padding: 20px 40px; font-size: 24px; cursor: pointer; border-radius: 10px; border: none; background: #007bff; color: white; }
+    </style>
+</head>
+<body>
+    <h1>Click the button for a surprise!</h1>
+    <button onclick="vibrateNow()">Tap Here</button>
+
+    <script>
+        function vibrateNow() {
+            if (navigator.vibrate) {
+                // Pattern: Vibrate 500ms, pause 200ms, vibrate 500ms
+                navigator.vibrate([500, 200, 500]);
+                alert("Bzzz! Hope you felt that.");
+            } else {
+                alert("Sorry, your device doesn't support vibration links.");
+            }
+        }
+    </script>
+</body>
+</html>
